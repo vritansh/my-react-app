@@ -1,6 +1,6 @@
 on:
   push:
-   branches: [main]
+   branches: [master]
 
 defaults:
   run:
@@ -22,6 +22,12 @@ jobs:
         run: npm install    
       - name: Generate build
         run: npm run build
-      - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v2
-
+      - name: View contents of file 
+        run: ls 
+      - name: View pwd 
+        run: pwd
+      - name: Share artifact inside workflow
+        uses: actions/upload-artifact@v2
+        with:
+          name: react-git-gen-build
+          path: build
