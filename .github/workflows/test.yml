@@ -26,10 +26,8 @@ jobs:
         run: ls 
       - name: View pwd 
         run: pwd
-      # Share artifact inside workflow
       - name: Share artifact inside workflow
-        uses: actions/download-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: react-git-gen-build
           path: build
- 
