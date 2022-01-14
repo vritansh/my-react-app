@@ -8,7 +8,7 @@ state = { term : 'Hi Tehre'}
      <div className="ui segment"> 
         <form className="ui form"> 
             <div>
-                <label> Search for Images </label>
+                <label>Image search </label>
                 <input value={this.state.term} onChange={ (event) => this.setState({term: event.target.value})} type="text"/>
             </div>
         </form>
