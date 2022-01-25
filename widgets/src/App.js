@@ -8,7 +8,7 @@ const items = [
 },
 {
     title:'Why use react? ',
-    content:'React is favorite '
+    content:'React is one of the emerging languages'
 },
 {
     title:'How do you use React? ',
