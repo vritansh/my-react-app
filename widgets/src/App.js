@@ -1,27 +1,50 @@
 import React from "react";
 import Accordion from'./components/Accordion'
 import Search from "./components/Search";
+import Dropdown from './components/Dropdown'
+import { useState } from "react";
+
 const items = [
 {
-    title:' What is react? ',
-    content:' Sample anser'
+    title:'Random value',
+    content:'random content'
 },
 {
-    title:'Why use react? ',
-    content:'React is one of the emerging languages'
+    title:'random value 2',
+    content:'random content 2 '
 },
 {
-    title:'How do you use React? ',
-    content:'it is used to create comps'
+    title:'black',
+    content:'cyan'
 }
 ]
 
+const options = [
+    {
+        key:'Red',
+        value:'blue'
+    },
+    {
+        key:'Blue',
+        value:'green'
+    },
+    {
+        key:'black',
+        value:'cyan'
+    }
+    ]
 
+    
 export default() => {
+    const [selected, setSelected] = useState(options[0]);
+
     return ( 
     <div>
-        <br></br>
-        <Search></Search>
+        <Dropdown 
+            selected = {selected}
+            onSelectedChange={setSelected}
+            options={options}
+        options={options} />
     </div>
     );
 } 
