@@ -14,7 +14,7 @@ const Accordion = ({items}) => {
 
     const renderedItem = items.map((item,index)=>
         {
-            const active = index ===activeIndex?'active':'';
+            const active = index === activeIndex ?'active':'';
 
 
             return <React.Fragment key={item.title}> 

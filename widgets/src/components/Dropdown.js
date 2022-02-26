@@ -12,7 +12,7 @@ useEffect(() => {
             return;
         }
         setOpen(false);
-    };
+    }; 
  
     document.body.addEventListener('click', onBodyClick)
     return () => {
